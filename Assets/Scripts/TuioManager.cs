@@ -167,7 +167,7 @@ public class TuioManager : MonoBehaviour
                         info.State = EventState.Entering;//主动改状态,在下一个循环进行更新
                         _eventInfos[i] = info;
                         //Debug.Log(EventInfos.Count);
-                        //Debug.Log("id " + info.ID + "  Enter. position is " + info.EnterPos);
+                        Debug.Log("id " + info.ID + "  Enter. position is " + info.EnterPos);
                         break;
 
                     case EventState.Entering:
@@ -374,7 +374,7 @@ public class TuioManager : MonoBehaviour
             var angle = degs ? (entity.Angle * (180f / Math.PI)) : entity.Angle;
             id = entity.ClassId;
             pos = new Vector2(_screenWidth * x, _screenHeight * y);
-            // Debug.Log(string.Format("{0} Object Added {1}/{2}:{3},{4} {5:F3}", ((ObjectProcessor)sender).FrameNumber, entity.ClassId, entity.Id, pos.x, pos.y, angle));
+             Debug.Log(string.Format("{0} Object Added {1}/{2}:{3},{4} {5:F3}", ((ObjectProcessor)sender).FrameNumber, entity.ClassId, entity.Id, pos.x, pos.y, angle));
             //Debug.Log("OnObjectAdded " + id);
 
             bool isContains = false;
